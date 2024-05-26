@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mainBox{
+    background: url(back.jpg) center no-repeat ;
+    background-size: cover;
+    height: 100vh;
+    
+
+}
+.mainBox .slidebarMenu{
+    position: fixed;
+    height: 100vh;
+    width: 280px;
+    left: -280px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.144);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5) ;
+
+}
+.slidebarMenu .logo{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+
+}
+.slidebarMenu .logo a{
+    color: aliceblue;
+    font-size: 25px;
+    text-decoration: none;
+    left: 50px;
+    position: absolute;
+    line-height: 60px;
+    font-weight: 500;
+}
+.slidebarMenu .menu{
+    position: absolute;
+    top: 80px;
+    width: 100%;
+}
+.slidebarMenu .menu li{
+    margin-top: 10px;
+    padding: 14px 20px;
+    transition: all .3s linear;
+}
+.slidebarMenu .menu i{
+    color: #fff;
+    font-size: 20px;
+    padding-right: 8px;
+}
+.slidebarMenu .menu a{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+.slidebarMenu .menu li:hover{
+    border-left: 1px solid #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+    transition: all .3s linear;
+}
+.slidebarMenu .menu .media-buttons{
+    position: relative;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.slidebarMenu .menu .media-buttons i{
+    margin-right: 8px;
+    font-size: 25px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.slidebarMenu .menu .media-buttons i:hover{
+    transform:scale(1.01);
+    opacity: 1;
+    transition: all 1ms ease-in-out;
+}
+#check{
+    display: none;
+}
+.mainBox .btn1 i{
+    color:#fff ;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.3s linear;
+    
+}
+.slidebarMenu .btn2 i {
+    font-size: 34px;
+    line-height: 60px;
+    position: absolute;
+    left: 240px;
+    color: #fff;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 0.3px linear;
+}
+.btn1 i:hover{
+    font-size: 27px;
+}
+#check:checked ~.slidebarMenu{
+    left: 0px;
+}
+#check:checked ~.btn1 i{
+    opacity: 0px;
+}
+#check:checked ~.slidebarMenu .btn2 i{
+    opacity: 1;
+}
+.btn2 i:hover{
+    cursor: pointer;
+}
